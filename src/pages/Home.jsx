@@ -1,29 +1,17 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Section from './components/Section';
-import Footer from './components/Footer';
+import Hero from '../components/Hero';
+import Section from '../components/Section';
 
-function App() {
+export default function Home() {
   const features = [
-    {
-      title: 'Enterprise‑grade',
-      desc: 'Security, performance, and reliability baked into every delivery.',
-    },
-    {
-      title: '3D & Motion',
-      desc: 'Immersive product stories powered by real‑time 3D and smooth animations.',
-    },
-    {
-      title: 'Cloud‑native',
-      desc: 'Modern architectures on AWS/GCP with CI/CD and observability.',
-    },
+    { title: 'Enterprise‑grade', desc: 'Security, performance, and reliability baked into every delivery.' },
+    { title: '3D & Motion', desc: 'Immersive product stories powered by real‑time 3D and smooth animations.' },
+    { title: 'Cloud‑native', desc: 'Modern architectures on AWS/GCP with CI/CD and observability.' },
   ];
 
   const logos = ['Apex', 'Orbit', 'Northwind', 'Acme', 'Globex', 'Umbra'];
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      <Navbar />
+    <>
       <Hero />
 
       <main className="relative">
@@ -55,10 +43,6 @@ function App() {
           </div>
         </Section>
       </main>
-
-      <Footer />
-    </div>
+    </>
   );
 }
-
-export default App;
