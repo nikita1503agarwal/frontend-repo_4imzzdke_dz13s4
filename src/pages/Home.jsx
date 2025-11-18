@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import Section from '../components/Section';
+import MiniScene from '../components/MiniScene';
 
 export default function Home() {
   const features = [
@@ -9,6 +10,15 @@ export default function Home() {
   ];
 
   const logos = ['Apex', 'Orbit', 'Northwind', 'Acme', 'Globex', 'Umbra'];
+
+  const gallery = [
+    { title: 'Hero Rig', description: 'Spline scene with camera parallax and glowing accents.' },
+    { title: 'Control Panel', description: 'Interactive UI dials and toggles in 3D.' },
+    { title: 'Product Card', description: 'Floating card with depth, blur, and motion.' },
+    { title: 'Logo Orb', description: 'Orbital animation with trails and bloom.' },
+    { title: 'Hologram', description: 'Volumetric scan with shimmering effect.' },
+    { title: 'City Block', description: 'Procedural blocks and neon signage.' },
+  ];
 
   return (
     <>
@@ -23,6 +33,14 @@ export default function Home() {
                 <p className="mt-2 text-sm text-slate-300">{f.desc}</p>
               </div>
             ))}
+          </div>
+        </Section>
+
+        <Section eyebrow="3D Showcase" title="Concept gallery">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {gallery.map((g) => (
+              <MiniScene key={g.title} title={g.title} description={g.description} />)
+            )}
           </div>
         </Section>
 
